@@ -1,0 +1,214 @@
+/* ************ Importing Fonts *************** */
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+/* ************ Global Styling **************** */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* ****************** Utility Classes ****************** */
+
+.navigation-bar ul .nav-item.active {
+    display: block;
+}
+
+
+/* ************** Navbar Styling ****************** */
+
+.navigation-bar {
+    width: 100%;
+    background-color: #24252a;
+    padding: 0.5rem 1rem;
+}
+
+.navigation-bar ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.navigation-bar ul li {
+    cursor: pointer;
+    padding: 0.7rem 0.5rem;
+}
+
+.navigation-bar ul li a {
+    color: #c1c1c1;
+    font-size: 1.2rem;
+}
+
+.navigation-bar ul .logo a i {
+    display: inline-block;
+    font-size: 4rem;
+    color: #edf0f1;
+}
+
+.navigation-bar ul .nav-item {
+    width: 100%;
+    order: 2;
+    text-align: center;
+    background-color: rgba(35, 35, 36, 0.549);
+    border: 1px solid rgba(237, 240, 241, 0.185);
+    border-radius: 50px;
+    padding: 0.5rem;
+    margin: 0.8rem auto;
+    display: none;
+}
+
+.navigation-bar ul .nav-item a {
+    display: block;
+}
+
+.navigation-bar ul .nav-item a {
+    transition: all 0.3s ease-in-out;
+}
+
+.navigation-bar ul .nav-item a:hover {
+    color: #0088a9;
+}
+
+.navigation-bar ul .nav-button {
+    order: 2;
+}
+
+.navigation-bar ul .toggle {
+    order: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigation-bar ul .toggle .hamburger-menu {
+    background-color: #c1c1c1;
+    display: inline-block;
+    width: 18px;
+    height: 0.24rem;
+    border-radius: 25%;
+    position: relative;
+}
+
+.navigation-bar ul .toggle .hamburger-menu::before,
+.navigation-bar ul .toggle .hamburger-menu::after {
+    content: "";
+    background: #c1c1c1;
+    display: inline-block;
+    width: 18px;
+    height: 0.2rem;
+    border-radius: 25%;
+    position: absolute;
+}
+
+.navigation-bar ul .toggle .hamburger-menu::before {
+    top: 6px;
+}
+
+.navigation-bar ul .toggle .hamburger-menu::after {
+    top: -6px;
+}
+
+
+/* ****************** Media Queries ****************** */
+
+@media only screen and (min-width: 468px) {
+    .navigation-bar {
+        padding: 0.5rem 2rem;
+    }
+    .navigation-bar ul {
+        justify-content: center;
+    }
+    .navigation-bar ul .logo {
+        flex: 1;
+    }
+    .navigation-bar ul .logo a i {
+        font-size: 5rem;
+    }
+    .navigation-bar ul .nav-button {
+        width: auto;
+        display: inline-block;
+        order: 1;
+        border: none;
+        outline: none;
+    }
+    .navigation-bar ul .nav-button a {
+        font-size: 1.2rem;
+        padding: 0.4em 0.85em;
+        background-color: rgba(0, 136, 169, 1);
+        border: 1px solid rgb(1, 123, 153);
+        color: #d0e0e6;
+        border-radius: 50em;
+        letter-spacing: 0.02em;
+        font-weight: normal;
+        transition: all 0.25s ease-in-out;
+    }
+    .navigation-bar ul .nav-button a:hover {
+        color: #d0e0e6;
+        box-shadow: 0px 0px 5px #0088a9;
+    }
+    .navigation-bar ul .toggle {
+        order: 2;
+        margin-left: 1rem;
+    }
+    .navigation-bar ul .nav-link {
+        order: 3;
+    }
+    .navigation-bar ul .nav-link a {
+        font-size: 1.3rem;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .navigation-bar ul .nav-item {
+        display: inline-block;
+        width: auto;
+    }
+    .navigation-bar ul .toggle {
+        display: none;
+    }
+    .navigation-bar ul .logo {
+        order: 0;
+    }
+    .navigation-bar ul .nav-link {
+        order: 1;
+        margin-right: 2rem;
+        border: none;
+        background: none;
+    }
+    .navigation-bar ul .nav-link a {
+        font-size: 1.4rem;
+        color: #edf0f1;
+    }
+    .navigation-bar ul .nav-button {
+        order: 2;
+    }
+    .navigation-bar ul .nav-button a {
+        font-size: 1.3rem;
+    }
+}
+
+@media only screen and (min-width: 1100px) {
+    .navigation-bar {
+        padding: 0.5rem 10%;
+    }
+}
